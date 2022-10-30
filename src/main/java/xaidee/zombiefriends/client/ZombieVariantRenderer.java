@@ -2,12 +2,13 @@ package xaidee.zombiefriends.client;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.MethodsReturnNonnullByDefault;
+import net.minecraft.client.model.HumanoidModel;
 import net.minecraft.client.model.geom.EntityModelSet;
 import net.minecraft.client.model.geom.ModelLayers;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.entity.*;
+import net.minecraft.client.renderer.entity.layers.HumanoidArmorLayer;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.entity.animal.Turtle;
 import net.minecraft.world.entity.monster.Zombie;
 import xaidee.zombiefriends.entity.ZombieVariant;
 
@@ -31,6 +32,7 @@ public class ZombieVariantRenderer extends HumanoidMobRenderer<Zombie, ZombieVar
     public ZombieVariantRenderer(EntityRendererProvider.Context context, boolean slim) {
         super(context, createModel(context.getModelSet(), slim), 0.5F);
         this.context = context;
+        this.addLayer(new HumanoidArmorLayer<>(this, new HumanoidModel<>(context.bakeLayer(slim ? ModelLayers.PLAYER_SLIM_INNER_ARMOR : ModelLayers.PLAYER_INNER_ARMOR)), new HumanoidModel<>(context.bakeLayer(slim ? ModelLayers.PLAYER_SLIM_OUTER_ARMOR : ModelLayers.PLAYER_OUTER_ARMOR))));
         if (OLD_ZOMBIE_RENDER != null)
             OLD_ZOMBIE_RENDER = OLD_ZOMBIE_RENDER_FACTORY.create(context);
     }
