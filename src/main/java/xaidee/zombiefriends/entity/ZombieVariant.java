@@ -58,10 +58,6 @@ public enum ZombieVariant {
         return BY_ID[choice].isSlim();
     }
 
-    public static ZombieVariant getSpawnVariant(Random randomSource) {
-        return Util.getRandom(BY_ID, randomSource);
-    }
-
     public static ResourceLocation getRandomTexture(Entity entity) {
         if (entity.hasCustomName()) {
             for (ZombieVariant variant : BY_ID) {
