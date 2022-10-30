@@ -1,13 +1,11 @@
 package xaidee.zombiefriends.entity;
 
-import net.minecraft.Util;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.Entity;
 import xaidee.zombiefriends.ZombieFriends;
 
 import java.util.Arrays;
 import java.util.Comparator;
-import java.util.Random;
 import java.util.UUID;
 
 public enum ZombieVariant {

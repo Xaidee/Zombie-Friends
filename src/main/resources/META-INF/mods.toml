@@ -10,14 +10,14 @@ version="${file.jarVersion}"
 displayName="Zombie Friends"
 #updateJSONURL=""
 displayURL="https://www.curseforge.com/minecraft/mc-mods/zombie-friends"
-logoFile="logo.png"
+logoFile="banner.png"
 logoBlur=false
-itemIcon=""
-configBackground=""
-#credits=""
+itemIcon="minecraft:zombie_head"
+configBackground="minecraft:textures/block/stone_bricks.png"
+credits="Team Galena"
 authors="Xaidee Quartz"
 description='''
-Adds variants of Zombies for Alex, Steve, and all their new friends!
+A small mod that adds texture variants for all the new default skins added by Mojang. They will be randomly applied to spawned Zombies but can be manually changed using nametags!
 '''
 
 [[dependencies.zombiefriends]]
