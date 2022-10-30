@@ -1,0 +1,35 @@
+modLoader="javafml"
+loaderVersion="[43,)"
+issueTrackerURL="https://github.com/xaidee/Zombie-Friends/issues/"
+license="The MIT License (MIT)"
+
+[[mods]]
+modId="zombiefriends"
+# The Implementation-Version property in the jar's MANIFEST.MF file will be used as the mod version at runtime
+version="${file.jarVersion}"
+displayName="Zombie Friends"
+#updateJSONURL=""
+displayURL="https://www.curseforge.com/minecraft/mc-mods/zombie-friends"
+logoFile="logo.png"
+logoBlur=false
+itemIcon=""
+configBackground=""
+#credits=""
+authors="Xaidee Quartz"
+description='''
+Adds variants of Zombies for Alex, Steve, and all their new friends!
+'''
+
+[[dependencies.zombiefriends]]
+    modId="forge"
+    mandatory=true
+    versionRange="[43.1.0,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.zombiefriends]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.19,1.20)"
+    ordering="NONE"
+    side="BOTH"
