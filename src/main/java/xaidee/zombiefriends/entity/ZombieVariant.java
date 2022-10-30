@@ -1,8 +1,6 @@
 package xaidee.zombiefriends.entity;
 
-import net.minecraft.Util;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.Entity;
 import xaidee.zombiefriends.ZombieFriends;
 
@@ -56,10 +54,6 @@ public enum ZombieVariant {
         long most = id.getMostSignificantBits();
         int choice = Math.abs((int) (most % BY_ID.length));
         return BY_ID[choice].isSlim();
-    }
-
-    public static ZombieVariant getSpawnVariant(RandomSource randomSource) {
-        return Util.getRandom(BY_ID, randomSource);
     }
 
     public static ResourceLocation getRandomTexture(Entity entity) {
