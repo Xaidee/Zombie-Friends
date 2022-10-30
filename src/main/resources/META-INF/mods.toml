@@ -1,5 +1,5 @@
 modLoader="javafml"
-loaderVersion="[43,)"
+loaderVersion="[40,)"
 issueTrackerURL="https://github.com/xaidee/Zombie-Friends/issues/"
 license="The MIT License (MIT)"
 
@@ -23,13 +23,13 @@ Adds variants of Zombies for Alex, Steve, and all their new friends!
 [[dependencies.zombiefriends]]
     modId="forge"
     mandatory=true
-    versionRange="[43.1.0,)"
+    versionRange="[40.1.0,)"
     ordering="NONE"
     side="BOTH"
 
 [[dependencies.zombiefriends]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.19,1.20)"
+    versionRange="[1.18,1.19)"
     ordering="NONE"
     side="BOTH"
