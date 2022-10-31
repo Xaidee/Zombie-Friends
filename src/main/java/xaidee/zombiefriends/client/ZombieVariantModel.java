@@ -13,8 +13,6 @@ import net.minecraft.world.entity.monster.Zombie;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
-import javax.annotation.ParametersAreNonnullByDefault;
-
 @OnlyIn(Dist.CLIENT)
 public class ZombieVariantModel<T extends Zombie> extends PlayerModel<T> {
 
