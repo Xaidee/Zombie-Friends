@@ -51,6 +51,7 @@ public enum ZombieVariant {
             }
         }
         UUID id = entity.getUUID();
+        if (id == null) return BY_ID[0].isSlim();
         long most = id.getMostSignificantBits();
         int choice = Math.abs((int) (most % BY_ID.length));
         return BY_ID[choice].isSlim();
@@ -64,6 +65,7 @@ public enum ZombieVariant {
             }
         }
         UUID id = entity.getUUID();
+        if (id == null) return getTexture(BY_ID[0]);
         long most = id.getMostSignificantBits();
         int choice = Math.abs((int) (most % BY_ID.length));
         return getTexture(BY_ID[choice]);
