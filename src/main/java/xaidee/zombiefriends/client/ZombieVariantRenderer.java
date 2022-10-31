@@ -1,7 +1,6 @@
 package xaidee.zombiefriends.client;
 
 import com.mojang.blaze3d.vertex.PoseStack;
-import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.client.model.HumanoidModel;
 import net.minecraft.client.model.geom.EntityModelSet;
 import net.minecraft.client.model.geom.ModelLayers;
@@ -12,10 +11,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.monster.Zombie;
 import xaidee.zombiefriends.entity.ZombieVariant;
 
-import javax.annotation.ParametersAreNonnullByDefault;
 
-@ParametersAreNonnullByDefault
-@MethodsReturnNonnullByDefault
 public class ZombieVariantRenderer extends HumanoidMobRenderer<Zombie, ZombieVariantModel<Zombie>> {
 
     private static final ResourceLocation ZOMBIE_LOCATION = new ResourceLocation("textures/entity/zombie/zombie.png");

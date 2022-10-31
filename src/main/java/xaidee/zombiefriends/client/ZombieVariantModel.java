@@ -15,7 +15,6 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 
 import javax.annotation.ParametersAreNonnullByDefault;
 
-@ParametersAreNonnullByDefault
 @OnlyIn(Dist.CLIENT)
 public class ZombieVariantModel<T extends Zombie> extends PlayerModel<T> {
 
