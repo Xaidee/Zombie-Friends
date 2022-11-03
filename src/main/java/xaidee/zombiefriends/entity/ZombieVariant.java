@@ -64,10 +64,14 @@ public enum ZombieVariant {
                     return getTexture(variant);
             }
         }
-        UUID id = entity.getUUID();
-        if (id == null) return getTexture(BY_ID[0]);
-        long most = id.getMostSignificantBits();
-        int choice = Math.abs((int) (most % BY_ID.length));
-        return getTexture(BY_ID[choice]);
+        try {
+            UUID id = entity.getUUID();
+            long most = id.getMostSignificantBits();
+            int choice = Math.abs((int) (most % BY_ID.length));
+            return getTexture(BY_ID[choice]);
+        } catch (Exception e) {
+            ZombieFriends.LOGGER.warn("Failed to get Zombie's UUID! Defaulting to Steve variant", e);
+            return getTexture(BY_ID[0]);
+        }
     }
 }

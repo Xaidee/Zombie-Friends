@@ -8,6 +8,8 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import xaidee.zombiefriends.client.ZombieVariantRenderer;
 
 
@@ -15,6 +17,7 @@ import xaidee.zombiefriends.client.ZombieVariantRenderer;
 public class ZombieFriends {
 
     public static final String MOD_ID = "zombiefriends";
+    public static final Logger LOGGER = LogManager.getLogger();
 
     public ZombieFriends() {
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
