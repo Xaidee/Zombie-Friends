@@ -50,11 +50,15 @@ public enum ZombieVariant {
                     return variant.isSlim();
             }
         }
-        UUID id = entity.getUUID();
-        if (id == null) return BY_ID[0].isSlim();
-        long most = id.getMostSignificantBits();
-        int choice = Math.abs((int) (most % BY_ID.length));
-        return BY_ID[choice].isSlim();
+        try {
+            UUID id = entity.getUUID();
+            long most = id.getMostSignificantBits();
+            int choice = Math.abs((int) (most % BY_ID.length));
+            return BY_ID[choice].isSlim();
+        } catch (Exception e) {
+            ZombieFriends.LOGGER.warn("Failed to get Zombie's UUID! Defaulting to Steve variant.", e);
+            return BY_ID[0].isSlim();
+        }
     }
 
     public static ResourceLocation getRandomTexture(Entity entity) {
@@ -70,7 +74,7 @@ public enum ZombieVariant {
             int choice = Math.abs((int) (most % BY_ID.length));
             return getTexture(BY_ID[choice]);
         } catch (Exception e) {
-            ZombieFriends.LOGGER.warn("Failed to get Zombie's UUID! Defaulting to Steve variant", e);
+            ZombieFriends.LOGGER.warn("Failed to get Zombie's UUID! Defaulting to Steve variant.", e);
             return getTexture(BY_ID[0]);
         }
     }
