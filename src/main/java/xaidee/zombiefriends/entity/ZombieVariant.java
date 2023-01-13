@@ -2,12 +2,15 @@ package xaidee.zombiefriends.entity;
 
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.Entity;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 import xaidee.zombiefriends.ZombieFriends;
 
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.UUID;
 
+@OnlyIn(Dist.CLIENT)
 public enum ZombieVariant {
     STEVE(0, "steve", false),
     ALEX(1, "alex", true),

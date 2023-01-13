@@ -9,9 +9,11 @@ import net.minecraft.client.renderer.entity.*;
 import net.minecraft.client.renderer.entity.layers.HumanoidArmorLayer;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.monster.Zombie;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 import xaidee.zombiefriends.entity.ZombieVariant;
 
-
+@OnlyIn(Dist.CLIENT)
 public class ZombieVariantRenderer extends HumanoidMobRenderer<Zombie, ZombieVariantModel<Zombie>> {
 
     private static final ResourceLocation ZOMBIE_LOCATION = new ResourceLocation("textures/entity/zombie/zombie.png");

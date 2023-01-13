@@ -9,7 +9,6 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import xaidee.zombiefriends.client.ZombieVariantRenderer;
 
-
 @Mod(ZombieFriends.MOD_ID)
 @Mod.EventBusSubscriber(modid = ZombieFriends.MOD_ID, value = Dist.CLIENT, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class ZombieFriends {
